@@ -6,30 +6,39 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h2 id="clock">00:00:00</h2>
-    <form id="login-form" class="hidden">
-        <input id="username" required maxlength="8" type="text" placeholder="What's your name?" />
-        <button>Log In</button>
-    </form>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-        <input required type="text" placeholder="Write a Do do and press Enter">
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-        <span></span>
-        <span></span>
+    <div class="container">
+        <div class="hidden" id="login-container">
+            <h2 id="login-text">Hello, what's your name?</h2>
+            <form id="login-form">
+                <input id="username" required maxlength="8" type="text" autocomplete="off"/>
+                <div class="button-wrapper">
+                    <button id="continue_btn">Continue</button>
+                </div>
+            </form>
+        </div>
+        <div class="hidden" id="Todo-container">
+            <h1 id="clock">00:00</h1>
+            <h3 id="greeting"></h3>
+            <form id="todo-form">
+                <input required type="text" placeholder="Write a Do do and press Enter" />
+            </form>
+            <ul id="todo-list"></ul>
+            <div id="quote">
+                <span></span>
+                <span></span>
+            </div>
+            <div id="weather">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </div>
-    <div id="weather">
-        <span></span>
-        <span></span>
-    </div>
+    <script src="js/API_KEY.js"></script>
+    <script src="js/weather.js"></script>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
-    <script src="js/API_KEY.js"></script>
-    <script src="js/weather.js"></script>
 </body>
 </html>
