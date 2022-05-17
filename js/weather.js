@@ -1,3 +1,4 @@
+const API_KEY = apiKey.API_KEY;
 const weather = document.querySelector("#weather");
 const LATITUDE = "latitude"
 const LONGITUDE = "longitude"

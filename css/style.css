@@ -75,20 +75,110 @@ body {
     background-color: transparent;
     cursor: pointer;
 }
-#Todo-container {
+#todo-container {
     display: flex;
     height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-#clock{
+#weather {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    margin-bottom: auto;
+    margin-top: 20px;
+    margin-right: 40px;
+    align-items: flex-end;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#clock {
+    display: flex;
+    flex-direction: column;
     font-size: 6em;
     margin: 0;
-    align-self: center;
+    justify-content: center;
     font-weight: 500;
 }
-#greeting{
-    font-size: 1.5em;
+#greeting {
+    font-size: 2em;
     margin: 0;
+}
+#todo-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#todo-input {
+    text-align: center;
+    background-color: transparent;
+    width: 371px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+    outline: none;
+    color: white;
+    font-size: 2.3rem;
+}
+#todo-input::placeholder {
+    font-size: 20px;
+    color: rgba(255,255,255,0.7);
+}
+main span {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+#todo-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+}
+#todo-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+#todo-list input[type="checkbox"] {
+    display: none;
+}
+#todo-list input[type="checkbox"] + label {
+    width: 17px;
+    height: 17px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+#todo-list input[type="checkbox"]:checked + label {
+    background: url("check_icon.png") no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+#todo-list span {
+    font-size : 18px;
+}
+#todo-list button {
+    margin-left: 20px;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+}
+#todo-list button:hover {
+    background:transparent;
+}
+#quote {
+    margin-top: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

@@ -16,24 +16,27 @@
                 </div>
             </form>
         </div>
-        <div class="hidden" id="Todo-container">
-            <h1 id="clock">00:00</h1>
-            <h3 id="greeting"></h3>
-            <form id="todo-form">
-                <input required type="text" placeholder="Write a Do do and press Enter" />
-            </form>
-            <ul id="todo-list"></ul>
-            <div id="quote">
+        <div class="hidden" id="todo-container">
+            <div id="weather">
                 <span></span>
                 <span></span>
             </div>
-            <div id="weather">
+            <main>
+                <h1 id="clock">00:00</h1>
+                <h3 id="greeting"></h3>
+                <form id="todo-form">
+                    <input id="todo-input" required type="text" placeholder="What is your main focus for today?" onfocus="this.placeholder=''" onblur="this.placeholder='What is your main focus for today?'" autocomplete="off"/>
+                </form>
+                <span>Todo-list</span>
+                <ul id="todo-list"></ul>
+            </main>
+            <div id="quote">
                 <span></span>
                 <span></span>
             </div>
         </div>
     </div>
-    <script src="js/API_KEY.js"></script>
+    <script src="js/apikey.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>

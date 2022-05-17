@@ -22,11 +22,18 @@ function deleteTodo() {
 
 function paintTodo(newTodo) {
     const li = document.createElement("li");
+    const check = document.createElement("input");
+    check.type = "checkbox";
+    check.id = `check${newTodo.id}`;
+    const label = document.createElement("label");
+    label.setAttribute("for",check.id);
     const span = document.createElement("span");
     span.innerText = newTodo.value;
     const closeBtn = document.createElement("button");
-    closeBtn.innerText = "❌";
+    closeBtn.innerText = "x";
     closeBtn.id = newTodo.id;
+    li.appendChild(check);
+    li.appendChild(label);
     li.appendChild(span);
     li.appendChild(closeBtn);
     closeBtn.addEventListener("click",deleteTodo);
