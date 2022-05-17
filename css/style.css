@@ -16,7 +16,7 @@ body {
     z-index: -1;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: brightness(70%);
+    filter: brightness(62%);
 }
 .container {
     display: flex;
@@ -32,19 +32,19 @@ body {
     align-items: center;
     justify-content: center;
 }
-#login-text {
+#login-container #login-text {
     margin: 0 auto;
     padding: 5px;
     font-size: 3.5rem;
     font-weight: 400;
 }
-#login-form {
+#login-container #login-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#username {
+#login-container #login-form #username {
     text-align: center;
     background-color: transparent;
     width: 589px;
@@ -56,23 +56,23 @@ body {
     color: white;
     font-size: 2.3rem;
 }
-.button-wrapper {
+#login-container #login-form .button-wrapper {
     margin-top: 28.8px;
 }
-#continue_btn {
+#login-container #login-form .button-wrapper #continue_btn {
     border-radius: 20px;
     color: white;
     font-size: 1rem;
     text-align: center;
-    background-color: rgba(255,255,255,0.1);
+    background-color: transparent;
     border-color: white;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 24px;
     padding-right: 24px;
 }
-#continue_btn:hover {
-    background-color: transparent;
+#login-container #login-form .button-wrapper #continue_btn:hover {
+    background-color: rgba(255,255,255,0.1);
     cursor: pointer;
 }
 #todo-container {
@@ -82,7 +82,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-#weather {
+#todo-container #weather {
     display: flex;
     width: 100vw;
     flex-direction: column;
@@ -91,13 +91,13 @@ body {
     margin-right: 40px;
     align-items: flex-end;
 }
-main {
+#todo-container main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-#clock {
+#todo-container main #clock {
     display: flex;
     flex-direction: column;
     font-size: 6em;
@@ -105,20 +105,17 @@ main {
     justify-content: center;
     font-weight: 500;
 }
-#greeting {
+#todo-container main #greeting {
     font-size: 2em;
     margin: 0;
 }
-#todo-form {
+#todo-container main #todo-form {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
-#todo-input {
+#todo-container main #todo-form #todo-input {
     text-align: center;
     background-color: transparent;
-    width: 371px;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -128,29 +125,41 @@ main {
     color: white;
     font-size: 2.3rem;
 }
-#todo-input::placeholder {
+#todo-container main #todo-form #todo-input::placeholder {
     font-size: 20px;
     color: rgba(255,255,255,0.7);
 }
-main span {
+#todo-container main #todo-form #todo-btn {
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    height: 33.98px;
+    border: 1px solid rgba(255,255,255,0.5);
+    font-size: 20px;
+    margin-left: 20px;
+}
+#todo-container main #todo-form #todo-btn:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+#todo-container main span {
     font-size: 1.5em;
     font-weight: 400;
 }
-#todo-list {
+#todo-container main #todo-list {
     display: flex;
     flex-direction: column;
     list-style-type: none;
     padding: 0;
 }
-#todo-list li {
+#todo-container main #todo-list li {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
 }
-#todo-list input[type="checkbox"] {
+#todo-container main #todo-list input[type="checkbox"] {
     display: none;
 }
-#todo-list input[type="checkbox"] + label {
+#todo-container main #todo-list input[type="checkbox"] + label {
     width: 17px;
     height: 17px;
     background: transparent;
@@ -158,27 +167,34 @@ main span {
     border-radius: 5px;
     margin-right: 10px;
 }
-#todo-list input[type="checkbox"]:checked + label {
+#todo-container main #todo-list input[type="checkbox"]:checked + label {
     background: url("check_icon.png") no-repeat;
     background-position: center;
     background-size: 80%;
 }
-#todo-list span {
+#todo-container main #todo-list span {
     font-size : 18px;
 }
-#todo-list button {
+#todo-container main #todo-list button {
     margin-left: 20px;
-    background: rgba(255,255,255,0.1);
+    background: transparent;
     border: none;
     color: white;
 }
-#todo-list button:hover {
-    background:transparent;
+#todo-container main #todo-list button:hover {
+    background:rgba(255,255,255,0.1);
 }
-#quote {
+#todo-container .quote-wrapper {
     margin-top: auto;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+#todo-container .quote-wrapper #quote {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+#todo-container .quote-wrapper #author {
+    font-size: 13px;
 }
