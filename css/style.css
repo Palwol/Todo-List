@@ -112,8 +112,11 @@ body {
 #todo-container main #todo-form {
     display: flex;
     align-items: center;
+    position: relative;
 }
 #todo-container main #todo-form #todo-input {
+    width: 400px;
+    height: 50px;
     text-align: center;
     background-color: transparent;
     border-top: none;
@@ -122,20 +125,21 @@ body {
     border-bottom: 2px solid white;
     outline: none;
     color: white;
-    font-size: 2.3rem;
+    font-size: 2rem;
 }
 #todo-container main #todo-form #todo-input::placeholder {
     font-size: 20px;
     color: rgba(255,255,255,0.7);
 }
 #todo-container main #todo-form #todo-btn {
+    position: absolute;
     text-align: center;
     background-color: transparent;
     color: white;
     height: 33.98px;
     border: 1px solid rgba(255,255,255,0.5);
     font-size: 20px;
-    margin-left: 20px;
+    margin-left: 105%;
 }
 #todo-container main #todo-form #todo-btn:hover {
     background-color: rgba(255,255,255,0.1);
